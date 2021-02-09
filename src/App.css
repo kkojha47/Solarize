@@ -1,6 +1,11 @@
+html, body, #app, #app>div {
+  height: 100%
+}
+
 .app {
   padding: 30px;
   background-color: #f6f8f9;
+  min-height: 100%;
 }
 
 .brand{

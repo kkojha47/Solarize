@@ -54,12 +54,13 @@ function App() {
                 </div>
             </nav>
             <div className="app">
+                <Route path="/" exact component={Home}/>
+                <Route path="/about" component={About}/>
+                <Route path="/todo" component={Todo}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/signup" component={Signup}/>
             </div>
-            <Route path="/" exact component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/todo" component={Todo}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/signup" component={Signup}/>
+
         </Router>
 
     );
