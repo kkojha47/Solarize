@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -90,57 +90,3 @@ const Login = () => (
 );
 
 export default Login;
-
-
-
-// export default function Login(){
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [emailValid, validateEmail] = useState(false)
-//     const [passwordValid, validatePassword] = useState(false)
-//     const [formErrors, setFormErrors] = useState({})
-//
-//
-//     const handleEmail =  (e) => {
-//         console.log("email + ", e.target.value)
-//         setEmail(e.target.value)
-//     }
-//
-//     const handlePassword =  (e) =>  {setPassword(e.target.value)}
-//
-//     return(
-//         <div className="mx-auto shadow bg-light rounded w-50">
-//             <form className="m-auto py-5 w-75">
-//                 <Link className="navbar-brand brand mb-5 text-center w-100" to="/">
-//                     <img src={logo} alt={"Logo"} width="80em" height="80em"/>
-//                     <h2 className="font-weight-bold ">solarize</h2>
-//                 </Link>
-//                 <div className="form-group">
-//                     <label>Email address</label>
-//                     <input name="email" className="form-control" value={email}
-//                            onChange={(event) => handleEmail(event)}/>
-//                 </div>
-//
-//                 <div className="form-group">
-//                     <label>Password</label>
-//                     <input type="password" name="password" className="form-control" value={password}
-//                         onChange={(event => handlePassword(event))}
-//                     />
-//                 </div>
-//
-//                 <div className="form-group">
-//                     <div className="custom-control custom-checkbox">
-//                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
-//                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-//                     </div>
-//                 </div>
-//
-//                 <button type="submit" className="btn btn-block font-weight-bold text-xl-center p-2" style={{backgroundColor:"#81b395", color:"#ffffff"}}>Sign In</button>
-//                 <p className="forgot-password text-right">
-//                     <Link to="/">Forgot password?</Link>
-//                 </p>
-//             </form>
-//         </div>
-//
-//     );
-// }
