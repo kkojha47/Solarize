@@ -53,7 +53,7 @@ function App() {
                     </ul>
                 </div>
             </nav>
-            <div className="app" style={{height:"calc(100vh-60px)"}}>
+            <div className="app" style={{height:"100vh"}}>
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/todo" component={Todo}/>

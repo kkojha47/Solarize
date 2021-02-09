@@ -22,3 +22,7 @@ html, body, #app, #app>div {
   font-size: 18px;
   justify-content: space-between;
 }
+
+input.error {
+  border-color: red;
+}
