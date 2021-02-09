@@ -68,7 +68,7 @@ const Login = () => (
                                 value={values.password}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                className="form-control {errors.password && touched.password && 'error'}"
+                                className={`form-control ${errors.password && touched.password && 'error'}`}
                             />
                             {errors.password && touched.password && (
                                 <div className="input-feedback">{errors.password}</div>
@@ -77,7 +77,7 @@ const Login = () => (
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="btn btn-block font-weight-bold text-xl-center p-2 my-4"
+                            className="btn btn-block font-weight-bold text-xl-center p-2 my-5"
                             style={{backgroundColor:"#81b395", color:"#ffffff"}}>
                             Sign In
                         </button>
