@@ -1,6 +1,14 @@
 .app {
   padding: 30px;
-  background-color: floralwhite;
+  background-color: #f6f8f9;
+}
+
+.brand{
+  font-size: 1.6em !important;
+  font-weight: bolder;
+  font-family: Ayuthaya;
+  color: #b6f0cd !important; ;
+  width:10%
 }
 
 .todo {
