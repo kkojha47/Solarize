@@ -7,8 +7,8 @@ export default function Login(){
         <div className="mx-auto shadow bg-light rounded w-50">
             <form className="m-auto py-5 w-75">
                 <Link className="navbar-brand brand mb-5 text-center w-100" to="/">
-                    <img src={logo} alt={"Logo"} width="50em" height="50em"/>
-                    solarize
+                    <img src={logo} alt={"Logo"} width="80em" height="80em"/>
+                    <h2 className="font-weight-bold ">solarize</h2>
                 </Link>
                 <div className="form-group">
                     <label>Email address</label>

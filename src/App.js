@@ -28,7 +28,7 @@ function App() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <Link className="navbar-brand brand" to="/">
+                    <Link className="navbar-brand brand mx-md-5" to="/">
                         <img src={logo} alt={"Logo"} width="50em" height="50em"/>
                         solarize
                     </Link>
@@ -45,22 +45,35 @@ function App() {
                     </ul>
                     <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/login">Login</Link>
+                            <Link className="nav-link font-weight-bold " to="/login">Login</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/signup">Try for free</Link>
+                            <Link className="nav-link font-weight-bold " to="/signup">Try for free</Link>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div className="app">
+            <div className="app" style={{height:"calc(100vh-60px)"}}>
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/todo" component={Todo}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/signup" component={Signup}/>
-            </div>
 
+            </div>
+            <nav className="navbar fixed-bottom navbar-dark bg-dark" style={{height:"60px"}}>
+                <ul className="navbar-nav m-auto mt-2 mt-lg-0 d-flex flex-row" >
+                    <li className="nav-item py-2 px-5">
+                        <Link className="nav-link" to="/about">About</Link>
+                    </li>
+                    <li className="nav-item py-2 px-5">
+                        <Link className="nav-link disabled" to="/">Terms & Privacy</Link>
+                    </li>
+                    <li className="nav-item py-2 px-5">
+                        <Link className="nav-link disabled" to="/">Resources</Link>
+                    </li>
+                </ul>
+            </nav>
         </Router>
 
     );
