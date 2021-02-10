@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import {Route, BrowserRouter as Router, Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {AiFillFacebook, AiFillInstagram, AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from 'react-icons/ai'
 import Home from "./Components/Home"
 import Todo from "./Components/Todo"
 import About from "./Components/About"
@@ -12,9 +12,7 @@ import Signup from "./Components/Signup"
 
 
 
-import desktop from "./media/desktop.jpg"
-import kanban from "./media/kanban.jpg"
-import postIts from "./media/postIts.jpg"
+
 import logo from "./media/logo.svg"
 
 
@@ -53,18 +51,32 @@ function App() {
                     </ul>
                 </div>
             </nav>
-            <div className="app" style={{height:"100vh"}}>
+            <div className="app" >
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/todo" component={Todo}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/signup" component={Signup}/>
-
             </div>
             <nav className="navbar fixed-bottom navbar-dark bg-dark" style={{height:"60px"}}>
                 <ul className="navbar-nav m-auto mt-2 mt-lg-0 d-flex flex-row" >
-                    <li className="nav-item py-2 px-5">
-                        <Link className="nav-link" to="/about">About</Link>
+                    <li className="nav-item py-2 px-3">
+                        <Link className="nav-link" to="/about">Contact Us</Link>
+                    </li>
+                    <li className="nav-item py-2 px-3">
+                        <AiFillFacebook size={"2em"} color={"grey"}/>
+                    </li>
+                    <li className="nav-item py-2 px-3">
+                        <AiFillInstagram size={"2em"} color={"grey"}/>
+                    </li>
+                    <li className="nav-item py-2 px-3">
+                        <AiFillTwitterCircle size={"2em"} color={"grey"}/>
+                    </li>
+                    <li className="nav-item py-2 px-3">
+                        <AiFillLinkedin size={"2em"} color={"grey"}/>
+                    </li>
+                    <li className="nav-item py-2 px-3">
+                        <AiFillYoutube size={"2em"} color={"grey"}/>
                     </li>
                     <li className="nav-item py-2 px-5">
                         <Link className="nav-link disabled" to="/">Terms & Privacy</Link>

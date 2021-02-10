@@ -4,8 +4,6 @@ html, body, #app, #app>div {
 
 .app {
   padding: 30px;
-  background-color: #f6f8f9;
-  min-height: 100%;
 }
 
 .brand{
@@ -25,4 +23,14 @@ html, body, #app, #app>div {
 
 input.error {
   border-color: red;
+}
+
+#fixed{
+  background: url("./media/goals.jpg") no-repeat center center fixed;
+  opacity: 70%;
+  display: table;
+  height: 40em;
+  width: 100%;
+  position: relative;
+  background-size: cover;
 }
