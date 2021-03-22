@@ -78,7 +78,8 @@ const Login = () => (
                             type="submit"
                             disabled={isSubmitting}
                             className="btn btn-block font-weight-bold text-xl-center p-2 my-5"
-                            style={{backgroundColor:"#81b395", color:"#ffffff"}}>
+                            style={{backgroundColor:"#81b395", color:"#ffffff"}}
+                        >
                             Sign In
                         </button>
                     </form>
