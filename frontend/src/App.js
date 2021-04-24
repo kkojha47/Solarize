@@ -32,13 +32,13 @@ function App() {
                     </Link>
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
+                            <Link className="nav-link" to="/todo">Start a List</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link disabled" to="/">Pricing</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link disabled" to="/">Resources</Link>
+                            <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
                     <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
