@@ -46,32 +46,7 @@ function FormTodo({ addTodo, handleClose}) {
 }
 
 export default function Todo(){
-    const [todos, setTodos] = useState([
-        // {
-        //     title: "Go to Market",
-        //     description: "Buy ingredients to prepare dinner",
-        //     completed: false,
-        //     dueDate: new Date("2019 12 30")
-        // },
-        // {
-        //     title: "Study",
-        //     description: "Read Algebra and History textbook for the upcoming test",
-        //     dueDate: new Date("2019 12 30"),
-        //     completed: false,
-        // },
-        // {
-        //     title: "return library books",
-        //     description: "Go to library to return my books",
-        //     dueDate: new Date("2019 12 30"),
-        //     completed: true,
-        // },
-        // {
-        //     title: "Article",
-        //     description: "Make react and Django project",
-        //     dueDate: new Date("2019 12 30"),
-        //     completed: false,
-        // },
-    ]);
+    const [todos, setTodos] = useState([]);
 
     useEffect(() => {
         refreshList()
@@ -101,16 +76,17 @@ export default function Todo(){
         console.log(todos)
     };
 
-    const markTodo = index => {
-        const newTodos = [...todos];
-        newTodos[index].completed = true;
-        setTodos(newTodos);
+    const markTodo = todo => {
+        const newTodo = {...todo, completed: true}
+        axios
+            .put(`/api/todos/${todo.id}/`, newTodo)
+            .then((res) => refreshList());
     };
 
-    const removeTodo = index => {
-        const newTodos = [...todos];
-        newTodos.splice(index, 1);
-        setTodos(newTodos);
+    const removeTodo = id => {
+        axios
+            .delete(`/api/todos/${id}/`)
+            .then((res) => refreshList());
     };
 
     return(
@@ -131,7 +107,7 @@ export default function Todo(){
             </Modal>
             <div>
                 {todos.map((todo, index) => (
-                    <Card className="px-1 pt-2 my-2" border="info" >
+                    <Card className="px-1 pt-2 my-2" border="info" key={todo.id}>
                         <Accordion defaultActiveKey="1">
                             <Card.Title>
                                 <Accordion.Toggle as={Button} variant="text" eventKey="0" className="col-sm-9 mr-2">
@@ -147,8 +123,8 @@ export default function Todo(){
 
                                 {/*<span className="p-0 text-muted small">{`Due  by: ${todo.dueDate.toISOString().slice(0,10)}`}</span>*/}
                                 <span className="float-right">
-                                    <Button variant="outline-success" onClick={() => markTodo(index)}>✓</Button>{' '}
-                                    <Button variant="outline-danger" onClick={() => removeTodo(index)}>✕</Button>
+                                    <Button variant="outline-success" onClick={() => markTodo(todo)}>✓</Button>{' '}
+                                    <Button variant="outline-danger" onClick={() => removeTodo(todo.id)}>✕</Button>
                                 </span>
                             </Card.Title>
                             <Accordion.Collapse eventKey="0">
